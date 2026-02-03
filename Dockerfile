@@ -16,11 +16,6 @@ COPY requirements.txt .
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Pre-download ONNX models during build (faster container startup)
-RUN python -c "\
-from fast_alpr import ALPR; \
-ALPR(detector_model='yolo-v9-t-384-license-plate-end2end', ocr_model='cct-xs-v1-global-model')"
-
 # Copy application code
 COPY alpr_ftp.py .
 
