@@ -20,7 +20,7 @@ docker run -d -p 21:21 -p 21000-21010:21000-21010 \
 docker run -d -p 21:21 -p 21000-21010:21000-21010 \
   -e FTP_USER=camera \
   -e FTP_PASS=yourpassword \
-  -e WEBHOOK_URL=http://192.168.1.50/relay/0?turn=on \
+  -e WEBHOOK_URL=http://192.168.1.50/relay/0?turn=toggle \
   -e WEBHOOK_FILTER=known \
   -e WEBHOOK_METHOD=GET \
   -e KNOWN_PLATES='{"ABC123":{},"XYZ789":{"owner":"John"}}' \
